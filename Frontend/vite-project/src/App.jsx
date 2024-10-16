@@ -1,35 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
+import Home from './pages/Home';
+import Persona from './pages/Persona';
 
-function App() {
-  const [count, setCount] = useState(0)
+function AppContent() {
+  const location = useLocation();
+  const excludedPaths = ['/personas', '/pagina2', '/pagina3']; // Agrega más rutas según sea necesario
+  const showHeader = !excludedPaths.includes(location.pathname);
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="grid lg:grid-cols-4 xl:grid-cols-6 min-h-screen">
+      <Sidebar />
+      <main className="lg:col-span-3 xl:col-span-5 bg-gray-100 p-8 h-screen overflow-y-auto">
+        {showHeader && <Header />}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Persona" element={<Persona />} />
+        </Routes>
+      </main>
+    </div>
+  );
 }
 
-export default App
+function App() {
+  return (
+    <Router>
+      <AppContent />
+    </Router>
+  );
+}
+export default App;
