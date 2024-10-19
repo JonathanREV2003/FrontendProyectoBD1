@@ -1,6 +1,6 @@
 import React from 'react';
 import { usePersonas } from '../services/usePersonas';
-import { useNavigate } from 'react-router-dom'; // Importa useNavigate
+import { useNavigate } from 'react-router-dom';
 
 const PersonaList = () => {
   const {

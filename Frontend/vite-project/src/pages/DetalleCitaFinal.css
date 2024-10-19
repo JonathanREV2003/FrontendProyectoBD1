@@ -1,0 +1,62 @@
+.detalle-cita-final {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .titulo {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .tabla-estilizada {
+    width: 100%;
+    border-collapse: collapse; 
+    margin-bottom: 30px;
+  }
+  
+  .tabla-estilizada th, .tabla-estilizada td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .tabla-estilizada th {
+    background-color: #f4f4f4;
+    color: #555;
+    font-weight: bold;
+  }
+  
+  .tabla-estilizada tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .tabla-estilizada tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .tabla-estilizada td {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .tabla-estilizada td:first-child, 
+  .tabla-estilizada th:first-child {
+    border-left: none;
+  }
+  
+  .tabla-estilizada td:last-child, 
+  .tabla-estilizada th:last-child {
+    border-right: none;
+  }
+  
+  @media (max-width: 600px) {
+    .tabla-estilizada th, .tabla-estilizada td {
+      font-size: 0.9rem;
+      padding: 8px;
+    }
+  }
+  

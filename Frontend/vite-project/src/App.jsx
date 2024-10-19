@@ -4,6 +4,10 @@ import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Home from './pages/Home';
 import Persona from './pages/Persona';
+import ReporteCitas from './pages/ReporteCitas';
+import AgendarCita from './pages/AgendarCita';
+import DetalleCita from './pages/DetalleCita';
+import DetalleCitaFinal from './pages/DetalleCitaFinal';
 
 function AppContent() {
   const location = useLocation();
@@ -18,6 +22,10 @@ function AppContent() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Persona" element={<Persona />} />
+          <Route path="/Reporte" element={<ReporteCitas />} />
+          <Route path="/Agendarcita" element={<AgendarCita />} />
+          <Route path="/agendarcita/detallecita" element={<DetalleCita />} />
+          <Route path="/agendarcita/detallecita-final" element={<DetalleCitaFinal />} />
         </Routes>
       </main>
     </div>

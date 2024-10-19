@@ -1,0 +1,19 @@
+.form-cita {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .form-cita div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  

@@ -1,0 +1,36 @@
+.detalle-cita {
+    text-align: center;
+  }
+  
+  .botones-ficha {
+    margin: 20px 0;
+  }
+  
+  .botones-ficha button {
+    margin: 0 10px;
+  }
+  
+  .tabla-fichas {
+    margin: 20px auto;
+    width: 80%;
+    border-collapse: collapse;
+  }
+  
+  .tabla-fichas th, .tabla-fichas td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+  }
+  
+  .tabla-fichas th {
+    background-color: #f2f2f2;
+  }
+  
+  .tabla-fichas td {
+    background-color: #ffffff;
+  }
+  
+  .tabla-fichas tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  

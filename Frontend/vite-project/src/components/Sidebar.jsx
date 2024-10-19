@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 // Icons
 import {
   RiHome3Line,
@@ -11,6 +12,7 @@ import {
 
 const Sidebar = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const navigate = useNavigate();
   return (
     <>
         <div
@@ -32,30 +34,25 @@ const Sidebar = () => {
         {/* Nav */}
         <div className="bg-primary-300 p-8 rounded-tr-[100px] overflow-y-auto flex flex-col justify-between gap-8 h-[calc(100vh-30vh)]">
           <nav className="flex flex-col gap-8">
-            <a
-              href="#"
+            <button
+              onClick={() => navigate("/")}
               className="flex items-center gap-4 text-white py-2 px-4 rounded-xl hover:bg-primary-900/50 transition-colors"
             >
               <RiHome3Line /> Home
-            </a>
-            <a
-              href="#"
+            </button>
+            <button
+              onClick={() => navigate("/agendarcita/detallecita")}
               className="flex items-center gap-4 text-white py-2 px-4 rounded-xl hover:bg-primary-900/50 transition-colors"
             >
-              <RiFileCopyLine /> appointment
-            </a>
-            <a
-              href="#"
+              <RiFileCopyLine /> Pet card
+            </button>
+  
+            <button
+              onClick={() => navigate("/Reporte")}
               className="flex items-center gap-4 text-white py-2 px-4 rounded-xl hover:bg-primary-900/50 transition-colors"
             >
-              <RiWalletLine /> xxxxxx1
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-4 text-white py-2 px-4 rounded-xl hover:bg-primary-900/50 transition-colors"
-            >
-              <RiPieChartLine /> Axxxx2
-            </a>
+              <RiPieChartLine /> Reports
+            </button>
           </nav>
           <div className="bg-primary-900/50 text-white p-4 rounded-xl">
             <p className="text-gray-400">Having troubles?</p>
