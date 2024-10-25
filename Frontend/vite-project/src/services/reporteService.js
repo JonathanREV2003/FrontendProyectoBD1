@@ -12,4 +12,3 @@ export const obtenerReporteCitas = async (fechaInicio, fechaFin) => {
       throw error;
     }
   };
-  

@@ -4,7 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { RiHashtag } from "react-icons/ri";
 import { SlPeople } from "react-icons/sl";
 import { BsPersonCheck } from "react-icons/bs";
-
+import {  MdHomeWork } from "react-icons/md";
+import { HiIdentification } from "react-icons/hi";
 
 function Home() {
     const navigate = useNavigate();
@@ -18,6 +19,12 @@ function Home() {
     const paraAgendarCita = () => {
       navigate('Agendarcita');
     };
+    const paraServicio = () => {
+        navigate('/servicio');
+      };
+      const paraSucursal = () => {
+        navigate('/sucursal');
+      };
 
     return (
         <>
@@ -71,16 +78,14 @@ function Home() {
                 <div className="bg-primary-100/10 rounded-xl p-4">
                 <div className="flex items-center gap-4 mb-4">
 
-                    <span className="bg-primary-100 text-gray-300 text-2xl font-bold p-4 rounded-xl">
-                        15
-                    </span>
+                    <HiIdentification className="text-4xl -rotate-12" />
                     <div>
-                    <h3 className="font-bold">Assign clients</h3>
-                    <p className="text-gray-500">Frequent customers</p>
+                    <h3 className="font-bold">Create service</h3>
+                    <p className="text-gray-500">Grooming, Medical</p>
                     </div>
                 </div>
                 <div className="flex items-center gap-2 text-gray-500 text-sm">
-                    <button onClick={paraPersona} className="bg-primary-100 py-2 px-6 rounded-xl text-white w-full">
+                    <button onClick={paraServicio} className="bg-primary-100 py-2 px-6 rounded-xl text-white w-full">
                         Assign
                     </button>
                     </div>
@@ -88,20 +93,17 @@ function Home() {
 
                 <div className="bg-primary-100/10 rounded-xl p-4">
                     <div className="flex items-center gap-4 mb-4">
-                    <span className="bg-primary-100 text-gray-300 text-2xl font-bold p-4 rounded-xl">
-                        20
-                    </span>
+                    <MdHomeWork className="text-5xl" />
                     <div>
-                    <h3 className="font-bold">Assign clients</h3>
-                    <p className="text-gray-500">Frequent customers</p>
+                    <h3 className="font-bold">Create branch office</h3>
+                    <p className="text-gray-500">different departments </p>
                     </div>
                     </div>
                     <div className="flex items-center gap-2 text-gray-500 text-sm">
-                    <button onClick={paraPersona} className="bg-primary-100 py-2 px-6 rounded-xl text-white w-full">
+                    <button onClick={paraSucursal} className="bg-primary-100 py-2 px-6 rounded-xl text-white w-full">
                         Assign
                     </button>
                     </div>
-                
                 </div>
             </div>
 
@@ -109,48 +111,48 @@ function Home() {
             {/* Section 2 */}
             <section className="grid grid-cols-1 md:grid-cols-2 mt-10 gap-8">
             <div>
-                <h1 className="text-2xl font-bold mb-8">Recent invoices</h1>
+                <h1 className="text-2xl font-bold mb-8">Employee of the month</h1>
                 <div className="bg-white p-8 rounded-xl shadow-2xl mb-8 flex flex-col gap-8">
                 {/* Card 1 */}
                 <div className="grid grid-cols-1 xl:grid-cols-4 items-center gap-4 mb-4">
                     <div className="col-span-2 flex items-center gap-4">
                     <img
-                        src="https://img.freepik.com/foto-gratis/hombre-joven-hermoso-contento-camiseta-azul-que-senala-lado_1262-17845.jpg"
+                        src="https://scontent.fgua3-5.fna.fbcdn.net/v/t39.30808-6/311457690_124029940430566_6791945965851630984_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=qkFnkJypW70Q7kNvgFVRdlz&_nc_zt=23&_nc_ht=scontent.fgua3-5.fna&_nc_gid=ATyBk4VHDcSwcruRvxqvkFV&oh=00_AYBfe12ubPW6BjbcIxPzKyO3byrsLvgeC8W96ATER5harw&oe=67190C69"
                         className="w-14 h-14 object-cover rounded-xl"
                     />
                     <div>
-                        <h3 className="font-bold">Alexander Williams</h3>
-                        <p className="text-gray-500">JQ Holdings</p>
+                        <h3 className="font-bold">Melvin Cortez</h3>
+                        <p className="text-gray-500">Medico veterinario</p>
                     </div>
                     </div>
                     <div>
                     <span className="bg-green-100 text-green-800 py-1 px-3 rounded-full font-medium">
-                        Paid
+                        Citas medicas
                     </span>
                     </div>
                     <div>
-                    <span className="font-bold">&euro; 1,200.87</span>
+                    <span className="font-bold">8</span>
                     </div>
                 </div>
                 {/* Card 2 */}
                 <div className="grid grid-cols-1 xl:grid-cols-4 items-center gap-4 mb-4">
                     <div className="col-span-2 flex items-center gap-4">
                     <img
-                        src="https://img.freepik.com/foto-gratis/alegre-joven-deportista-posando-mostrando-pulgares-arriba-gesto_171337-8194.jpg"
+                        src="https://scontent.fgua3-6.fna.fbcdn.net/v/t39.30808-6/384497621_994998641721134_3534505849006573885_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Nu2Lhg6iQNIQ7kNvgGxuUDa&_nc_zt=23&_nc_ht=scontent.fgua3-6.fna&_nc_gid=A4xiGCSLafQnfF5pk0eVxSd&oh=00_AYABDU4RatgHG0JQHPz2CIC7Nw-A7rbiezl9as-2Zct6uw&oe=6718EB97"
                         className="w-14 h-14 object-cover rounded-xl"
                     />
                     <div>
-                        <h3 className="font-bold">Jhon Philips</h3>
-                        <p className="text-gray-500">Inchor Techs</p>
+                        <h3 className="font-bold">José Alejandro </h3>
+                        <p className="text-gray-500">Gromista</p>
                     </div>
                     </div>
                     <div>
-                    <span className="bg-red-100 text-red-800 py-1 px-3 rounded-full font-medium">
-                        Late
+                    <span className="bg-green-100 text-red-800 py-1 px-3 rounded-full font-medium">
+                        Groming citas
                     </span>
                     </div>
                     <div>
-                    <span className="font-bold">&euro; 12,998.88</span>
+                    <span className="font-bold"> 6</span>
                     </div>
                 </div>
                 </div>

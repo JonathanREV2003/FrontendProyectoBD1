@@ -8,6 +8,8 @@ import ReporteCitas from './pages/ReporteCitas';
 import AgendarCita from './pages/AgendarCita';
 import DetalleCita from './pages/DetalleCita';
 import DetalleCitaFinal from './pages/DetalleCitaFinal';
+import Servicio from './pages/Servicio';
+import Sucursal from './pages/Sucursal';
 
 function AppContent() {
   const location = useLocation();
@@ -26,6 +28,8 @@ function AppContent() {
           <Route path="/Agendarcita" element={<AgendarCita />} />
           <Route path="/agendarcita/detallecita" element={<DetalleCita />} />
           <Route path="/agendarcita/detallecita-final" element={<DetalleCitaFinal />} />
+          <Route path="/servicio" element={<Servicio />} />
+          <Route path="/sucursal" element={<Sucursal />} />
         </Routes>
       </main>
     </div>
