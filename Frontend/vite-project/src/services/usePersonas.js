@@ -161,7 +161,7 @@
       handleInputChange,
       handleAddClick,
       handleEditClick,
-      handleDeleteClick, // Agregado para la eliminación
+      handleDeleteClick, 
       handleFormSubmit,
       handleSearchChange,
       searchTerm,

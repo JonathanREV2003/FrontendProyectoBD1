@@ -25,7 +25,6 @@ function Home() {
       const paraSucursal = () => {
         navigate('/sucursal');
       };
-
     return (
         <>
             {/* Section 1 */}

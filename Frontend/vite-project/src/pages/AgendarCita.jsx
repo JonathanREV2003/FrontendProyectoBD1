@@ -4,6 +4,7 @@ import EmpleadoComboBox from '../services/EmpleadoComboBox';
 import ClienteComboBox from '../services/ClienteComboBox';
 import MascotaComboBox from '../services/MascotaComboBox';
 import ComboBoxServicio from '../services/ServicioComboBox';
+import DiagnosticoComboBox from '../services/DiagnosticoComboBox';
 
 const AgendarCita = () => {
   const [numeroCita, setNumeroCita] = useState('');
@@ -23,6 +24,7 @@ const AgendarCita = () => {
   const [fechaFin, setFechaFin] = useState('');
   const [horaFin, setHoraFin] = useState('');
   const [correlativo, setCorrelativo] = useState('');
+  const [codigoDiagnostico, setCodigoDiagnostico] = useState('');
   const [citaAgendada, setCitaAgendada] = useState(false);
 
   const handleSubmit = (e) => {
@@ -221,6 +223,18 @@ const AgendarCita = () => {
                 className="w-full p-2 border border-gray-300 rounded"
                 value={horaFin}
                 onChange={(e) => setHoraFin(e.target.value)}
+              />
+            </div>
+            <div>
+              <label className="block text-gray-700">Diagnóstico:</label>
+               <DiagnosticoComboBox onChange={setCodigoDiagnostico} />
+            </div>
+            <div>
+              <label className="block text-gray-700">Agregar Diagnóstico Opcional:</label>
+              <input
+                type="text"
+                className="w-full p-2 border border-gray-300 rounded"
+
               />
             </div>
           </div>
